@@ -89,5 +89,5 @@ g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
 * fly.txt
 
 ## Links
-* Download FlightGear Simulator:
-https://www.flightgear.org/download/
+* Download FlightGear Simulator: https://www.flightgear.org/download/
+* GitHub: https://github.com/ayelet97/Flight_Simulator
