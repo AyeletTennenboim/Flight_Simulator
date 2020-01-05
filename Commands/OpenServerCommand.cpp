@@ -151,7 +151,7 @@ int OpenServerCommand::execute(vector<string> &strArr, int index) {
     if (this->socketfd == -1) {
         // Error
         cerr << "Could not create a socket" << endl;
-        return -1;
+        exit(-1);
     }
 
     // Bind socket to IP address.
@@ -166,14 +166,14 @@ int OpenServerCommand::execute(vector<string> &strArr, int index) {
     if (bind(this->socketfd, (struct sockaddr *) &address, sizeof(address)) == -1) {
         // Error
         cerr << "Could not bind the socket to an IP" << endl;
-        return -2;
+        exit(-2);
     }
 
     // Make socket listen to the port
     if (listen(this->socketfd, 5) == -1) {
         // Error
         cerr << "Error during listening command" << endl;
-        return -3;
+        exit(-3);
     } else {
         cout << "Server is now listening ..." << endl;
     }
@@ -184,7 +184,7 @@ int OpenServerCommand::execute(vector<string> &strArr, int index) {
     if (client_socket == -1) {
         // Error
         cerr << "Error accepting client" << endl;
-        return -4;
+        exit(-4);
     }
     // Call a function that opens thread1 that runs readLineByLine function
     startThread(client_socket);

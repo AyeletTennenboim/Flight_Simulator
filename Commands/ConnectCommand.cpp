@@ -84,7 +84,7 @@ void ConnectCommand::connectClient(int portInt, string localHost) {
     if (client_socket == -1) {
         // Error
         cerr << "Could not create a socket" << endl;
-        return;
+        exit(-1);
     }
 
     // We need to create a sockaddr obj to hold address of server
@@ -97,7 +97,7 @@ void ConnectCommand::connectClient(int portInt, string localHost) {
     int is_connect = connect(client_socket, (struct sockaddr *)&address, sizeof(address));
     if (is_connect == -1) {
         cerr << "Could not connect to host server" << endl;
-        return;
+        exit(-1);
     } else {
         cout << "Client is now connected to server" << endl;
     }
