@@ -1,0 +1,23 @@
+openDataServer(5400)
+connectControlClient("10.0.2.2",5402)
+var breaks -> sim("/controls/flight/speedbreak")
+var throttle -> sim("/controls/engines/current-engine/throttle")
+var heading <- sim("/instrumentation/heading-indicator/offset-deg")
+var airspeed<-sim("/instrumentation/airspeed-indicator/indicated-speed-kt")
+var roll <- sim("/instrumentation/attitude-indicator/indicated-roll-deg")
+var pitch <- sim("/instrumentation/attitude-indicator/internal-pitch-deg")
+var rudder <- sim("/controls/flight/rudder")
+var aileron <- sim("/controls/flight/aileron")
+var elevator <- sim("/controls/flight/elevator")
+var alt <- sim("/instrumentation/altimeter/indicated-altitude-ft")
+breaks = 0
+throttle = 1
+var h0 = heading
+while alt < 1000 {
+rudder = (h0 - heading)/20
+aileron = - roll / 70
+elevator = pitch / 50
+Print(alt)
+Sleep(250)
+}
+Print("done")
