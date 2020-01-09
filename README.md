@@ -3,15 +3,8 @@
 This program created by Ayelet Tennenboim and May Bachar for Advance Programming course in Bar Ilan university.
 
 ## Authors
-**Ayelet Tennenboim**
-
-     - ID: 209026517
-     - Submit name: tennena
-     
+**Ayelet Tennenboim**   
 **May Bachar**
-
-     - ID: 313370876
-     - Submit name: bacharm3
 
 ## Intrudoction
 This program interprets code that allows remote control of flight simulator. This project in an advanced programming course is a showcase to our programming experience. The project contains the following elements: use of design and architectural templates, communication and server architecture, use of databases, data streaming, comparison, selection and implementation of algorithms within the system we create and parallel programming using Threads.
