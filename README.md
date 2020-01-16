@@ -13,9 +13,9 @@ In addition, we learned about team work.
 
 ## Description
 The program receives a text file containing code with commands for the airplane.
-Using the lexer function, the program reads the file and decomposes the code into an array of strings. Using a Command Pattern and hash map, the program associates a string with a specific command object that will be executed later (time complexity of extracting an object from the map is O(1)).
+Using the lexer function, the program reads the file and decomposes the code into an array of strings. Using a Command Pattern and hash map, the program associates a string with a specific command object that will be executed later.
 
-At first, the program executes Open Server command that runs in the background and reads line by line from the simulator. The simulator connects to the program as a client and passes values of variables defined in the "generic_small.xml" file‬‬. The values are stored on hash map so the program can extracts the most updated value of a variable in O(1) time complexity.
+At first, the program executes Open Server command that runs in the background and reads line by line from the simulator. The simulator connects to the program as a client and passes values of variables defined in the "generic_small.xml" file‬‬.
 
 Then, in a separated thread, the program executes another command and connects as a client to the simulator, so later it could send flight instructions to the simulator.
 
