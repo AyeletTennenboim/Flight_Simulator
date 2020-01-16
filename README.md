@@ -28,12 +28,18 @@ The program executes all of these commands in order to control the flight simula
 ## Start Running
 * Download FlightGear Simulator - link in the list of attached links below.
 * In the main menu of flight gear, access the settings and add the following 	settings in "‫‪Additional‬‬ ‫‪Settings‬‬":
+```
 --telnet=socket,in,10,127.0.0.1,5402,tcp
 --generic=socket,out,10,127.0.0.1,5400,tcp,generic_small
+```
 * Compile the program in the linux terminal:
+```
 g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread
+```
 * Run the program with a text file:
+```
 ./a.out file_name.txt
+```
 * Press "Fly!" on flight gear simulator for connection.
 
 # Files
