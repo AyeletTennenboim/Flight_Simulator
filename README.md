@@ -1,6 +1,6 @@
 # **Flight Simulator**
 
-This program created by Ayelet Tennenboim and May Bachar for Advance Programming course in Bar Ilan university.
+This program created by Ayelet Tennenboim and May Bachar for Advanced Programming course in Bar Ilan university.
 
 ## Authors
 **Ayelet Tennenboim**   
